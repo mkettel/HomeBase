@@ -34,6 +34,7 @@ export default function Pool() {
   const video = () => videos.map((video) => {
     return (
       <div className="video" key={video.id}>
+        <h2>{video.title}</h2>
         <video
         controls
         height={250}
@@ -47,7 +48,9 @@ export default function Pool() {
 
   return <>
 
-    <a href="/">House</a>
+    <div className="home-link">
+      <a href="/">House</a>
+    </div>
 
     <div className="header-container">
       <div className="header">
