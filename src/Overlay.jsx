@@ -7,7 +7,7 @@ export default function Overlay() {
 
   return <>
     <div className="test-button">
-      <a className='nav' href="/house">Pool</a>
+      <a className='nav' href="/pool">Pool</a>
     </div>
   </>
 }
