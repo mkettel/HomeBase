@@ -12,9 +12,38 @@ export default function Pool() {
       id: 1,
       url: './videos/pool/cl-floating-chamber.mp4',
       title: 'Floating Chlorine Chamber'
+    },
+    {
+      id: 2,
+      url: './videos/pool/cl-floating-chamber.mp4',
+      title: 'Floating Chlorine Chamber'
+    },
+    {
+      id: 3,
+      url: './videos/pool/cl-floating-chamber.mp4',
+      title: 'Floating Chlorine Chamber'
+    },
+    {
+      id: 4,
+      url: './videos/pool/cl-floating-chamber.mp4',
+      title: 'Floating Chlorine Chamber'
     }
   ]
   console.log(videos[0].url);
+
+  const video = () => videos.map((video) => {
+    return (
+      <div className="video" key={video.id}>
+        <video
+        controls
+        height={250}
+        width={150}
+        >
+          <source src={video.url} type="video/mp4" />
+        </video>
+      </div>
+    )
+  })
 
   return <>
 
@@ -29,16 +58,7 @@ export default function Pool() {
     </div>
 
     <div className="video-container">
-      <div className="video">
-        <video
-        controls
-        height={400}
-        width={250}
-        aspectRatio={[4, 5]}
-        >
-          <source src={videos[0].url} type="video/mp4" />
-        </video>
-      </div>
+      {video && video()}
     </div>
 
 

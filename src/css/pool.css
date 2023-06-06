@@ -30,3 +30,17 @@ h1, h2, h3, h4, p, a {
   font-size: 48px;
   font-weight: 400;
 }
+
+.video-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 10px;
+  height: 100vh;
+}
+.video-container .video {
+  height: 500px;
+  width: 400px;
+}
