@@ -1,12 +1,32 @@
-
+/* FONTS TO USE FROM FONTSHARE.COM */
+/* font-family: 'Clash Display', sans-serif; */
+/* font-family: 'Satoshi', sans-serif; */
+/* font-family: 'Ranade', sans-serif; */
+/* font-family: 'Chillax', sans-serif; */
+/* font-family: 'Cabinet Grotesk', sans-serif; */
 
 :root {
-  background-color: black;
+  background-color: #335C67;
+}
+h1, h2, h3, h4, p, a {
+  font-family: 'Cabinet Grotesk', sans-serif;
 }
 
-.pool-container {
-  background-color: grey;
+
+.header-container {
   max-width: 1100px;
   margin: auto;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 10px;
+}
+.header-container .header-text {
+  display: flex;
+  flex-direction: column;
+}
+.header-container .header .header-text h1 {
+  color: #FFF9D6;
+  font-size: 48px;
+  font-weight: 400;
 }
