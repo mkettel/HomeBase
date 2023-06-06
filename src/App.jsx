@@ -13,8 +13,9 @@ export default function App() {
   return <>
     <div className="app">
       <Switch>
-        <Route path="/" component={Homepage} />
-        <Route path="/pool" component={Pool} />
+        <Route path="/" component={Pool} />
+        <Route path="/house" component={Homepage} />
+        <Route path="/about" component={Pool} />
       </Switch>
     </div>
 

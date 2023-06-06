@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/pool.css'
+import Overlay from './Overlay.jsx'
 
 
 
@@ -14,5 +15,6 @@ export default function Pool() {
 
       </div>
     </div>
+    <Overlay />
   </>
 }
