@@ -16,19 +16,19 @@ export default function Pool() {
     },
     {
       id: 2,
-      url: './videos/pool/Post-party-bicarb.mp4',
+      url: './videos/pool/cl-floating-chamber.mp4',
       title: 'Post Party & Rain',
       description: 'After a rain it is very important to add bicarbonate to the pool to raise the alkalinity'
     },
     {
       id: 3,
-      url: './videos/pool/pump-breaker-pool.mp4',
+      url: './videos/pool/cl-floating-chamber.mp4',
       title: 'Pool Pump Breaker',
       description: 'The pool pump breaker is located in the pump fence and should be shut off when it is in the heat of the day '
     },
     {
       id: 4,
-      url: './videos/pool/pump-pressure.mp4',
+      url: './videos/pool/cl-floating-chamber.mp4',
       title: 'Pool Pump Pressure',
       description: 'Need to keep the pressure between 12-15psi'
     }
