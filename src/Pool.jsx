@@ -11,22 +11,23 @@ export default function Pool() {
     {
       id: 1,
       url: './videos/pool/cl-floating-chamber.mp4',
-      title: 'Floating Chlorine Chamber'
+      title: 'Floating Chlorine Chamber',
+      description: 'The chamber can hold up to 6 tablets of chlorine'
     },
     {
       id: 2,
-      url: './videos/pool/cl-floating-chamber.mp4',
-      title: 'Floating Chlorine Chamber'
+      url: './videos/pool/Post-party-bicarb.mp4',
+      title: 'Post Party & Rain'
     },
     {
       id: 3,
-      url: './videos/pool/cl-floating-chamber.mp4',
-      title: 'Floating Chlorine Chamber'
+      url: './videos/pool/pump-breaker-pool.mp4',
+      title: 'Pool Pump Breaker'
     },
     {
       id: 4,
-      url: './videos/pool/cl-floating-chamber.mp4',
-      title: 'Floating Chlorine Chamber'
+      url: './videos/pool/pump-pressure.mp4',
+      title: 'Pool Pump Pressure'
     }
   ]
   console.log(videos[0].url);
@@ -36,12 +37,14 @@ export default function Pool() {
       <div className="video" key={video.id}>
         <h2>{video.title}</h2>
         <video
+        className='video-player'
         controls
         height={250}
-        width={150}
+        width={250}
         >
           <source src={video.url} type="video/mp4" />
         </video>
+        <p>{video.description}</p>
       </div>
     )
   })
@@ -60,11 +63,15 @@ export default function Pool() {
       </div>
     </div>
 
-    <div className="video-container">
-      {video && video()}
+    <div className="pool-section">
+      <div className="pool-section_title">
+        <h2>Pool Chores</h2>
+      </div>
+      <div className="video-list">
+        {video()}
+      </div>
+
     </div>
-
-
 
 
   </>

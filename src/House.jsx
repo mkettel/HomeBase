@@ -8,8 +8,12 @@ export default function House(props) {
   const { nodes, materials } = useGLTF("/winter-casa-everything.glb");
 
   materials.Snow.color = new THREE.Color(0xffffff); // Set snow color to white
-  materials.Snow.roughness = 0.5;
+  materials.Snow.roughness = 0.9;
   materials.Snow.metalness = 0.2;
+
+  // change house body color
+  materials["Material.002"].color = new THREE.Color('#918C78'); // Set house body color to brown
+  materials["Material.002"].roughness = 1;
 
 
   // House Rotation
@@ -26,6 +30,7 @@ export default function House(props) {
   // States
   const [hovered, setHovered] = useState(false);
 
+  // Cursor change on hover to pointer
   useEffect(() => {
     document.body.style.cursor = hovered ? 'pointer' : 'auto'
   }, [hovered])
