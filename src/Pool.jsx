@@ -17,17 +17,20 @@ export default function Pool() {
     {
       id: 2,
       url: './videos/pool/Post-party-bicarb.mp4',
-      title: 'Post Party & Rain'
+      title: 'Post Party & Rain',
+      description: 'After a rain it is very important to add bicarbonate to the pool to raise the alkalinity'
     },
     {
       id: 3,
       url: './videos/pool/pump-breaker-pool.mp4',
-      title: 'Pool Pump Breaker'
+      title: 'Pool Pump Breaker',
+      description: 'The pool pump breaker is located in the pump fence and should be shut off when it is in the heat of the day '
     },
     {
       id: 4,
       url: './videos/pool/pump-pressure.mp4',
-      title: 'Pool Pump Pressure'
+      title: 'Pool Pump Pressure',
+      description: 'Need to keep the pressure between 12-15psi'
     }
   ]
   console.log(videos[0].url);
@@ -44,7 +47,7 @@ export default function Pool() {
         >
           <source src={video.url} type="video/mp4" />
         </video>
-        <p>{video.description}</p>
+        <p className='description'>{video.description}</p>
       </div>
     )
   })
