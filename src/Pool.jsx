@@ -11,26 +11,22 @@ export default function Pool() {
     {
       id: 1,
       url: './videos/pool/cl-floating-chamber.mp4',
-      title: 'Floating Chlorine Chamber',
-      description: 'The chamber can hold up to 6 tablets of chlorine'
+      title: 'Floating Chlorine Chamber'
     },
     {
       id: 2,
-      url: './videos/pool/cl-floating-chamber.mp4',
-      title: 'Post Party & Rain',
-      description: 'After a rain it is very important to add bicarbonate to the pool to raise the alkalinity'
+      url: './videos/pool/pool-robot-cleaning.mp4',
+      title: 'Post Party & Rain'
     },
     {
       id: 3,
       url: './videos/pool/cl-floating-chamber.mp4',
-      title: 'Pool Pump Breaker',
-      description: 'The pool pump breaker is located in the pump fence and should be shut off when it is in the heat of the day '
+      title: 'Pool Pump Breaker'
     },
     {
       id: 4,
       url: './videos/pool/cl-floating-chamber.mp4',
-      title: 'Pool Pump Pressure',
-      description: 'Need to keep the pressure between 12-15psi'
+      title: 'Pool Pump Pressure'
     }
   ]
   console.log(videos[0].url);
