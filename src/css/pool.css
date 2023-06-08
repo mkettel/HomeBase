@@ -42,33 +42,50 @@ h1, h2, h3, h4, p, a {
 .home-link a {
   text-decoration: none;
   color: #EAFFDA;
-  font-size: 16px;
+  font-size: 22px;
+  font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+/* Video Content Section */
+.content-container-outer {
+  max-width: 1200px;
+  margin: auto;
+}
+.center-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.subject-title {
+  font-size: 32px;
+  font-weight: 450;
+  color: #EAFFDA;
+}
+.content-container-outer .content-container-inner {
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+}
+.content-container-description {
+  display: flex;
+  flex-direction: column;
+}
+.content-container-description .description-summary {
+  font-size: 18px;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  font-family: 'Cabinet Grotesk', sans-serif;
+}
+.content-container-description .description-steps {
+  font-size: 18px;
+  font-weight: 300;
+  color: black;
   font-family: 'Cabinet Grotesk', sans-serif;
 }
 
 
-/* Container for the videos */
-.pool-section {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  width: 100%;
-  padding-top: 10px;
-}
-.pool-section .pool-section_title h2 {
-  font-size: 42px;
-  font-weight: 400;
-  margin-bottom: 10px;
-}
 
-/* Holds the video list box */
-.pool-section .video-list {
-  display: flex;
-  justify-content: space-between;
-}
 
 /* The actual videos Box for each one */
 .video {

@@ -31,6 +31,7 @@ export default function Pool() {
   ]
   console.log(videos[0].url);
 
+  // Maps Through videos array and returns a video element for each video
   const video = () => videos.map((video) => {
     return (
       <div className="video" key={video.id}>
@@ -48,6 +49,9 @@ export default function Pool() {
     )
   })
 
+  const secondVideo = () => videos[1]
+  console.log(secondVideo());
+
   return <>
 
     <div className="home-link">
@@ -62,12 +66,32 @@ export default function Pool() {
       </div>
     </div>
 
-    <div className="pool-section">
-      <div className="pool-section_title">
-        <h2>Pool Chores</h2>
+    <div className="content-container-outer">
+      <div className="content-container center-title">
+        <h2 className='subject-title'>{videos[0].title}</h2>
       </div>
-      <div className="video-list">
-        {video()}
+      <div className="content-container-inner">
+        <div className="content-container-video">
+          <video
+            className='video-player'
+            controls
+            height={250}
+            width={250}
+          >
+            <source src={videos[0].url} type="video/mp4" />
+          </video>
+        </div>
+        <div className="content-container-description">
+          <div className="description-summary">
+            <p>The floating chlorine chamber is used to slowly release the chlorine into the pool over time and can hold up to 6 tablets at one time</p>
+          </div>
+          <div className="description-steps">
+            <ol>
+              <li>Open the floating chlorine chamber</li>
+              <li>Place 6 chlorine tablets into the chamber as needed</li>
+            </ol>
+          </div>
+        </div>
       </div>
 
     </div>
