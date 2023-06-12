@@ -27,6 +27,7 @@ export default function House(props) {
     window.location.href = "/pool";
   }
 
+
   // States
   const [hovered, setHovered] = useState(false);
 

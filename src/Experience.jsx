@@ -1,11 +1,10 @@
 import { Trail, useMatcapTexture ,Center, Text3D, OrbitControls, MeshTransmissionMaterial } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
 import * as THREE from 'three'
-import { useRef } from 'react'
-import { useFrame } from '@react-three/fiber'
+import { useRef, Suspense } from 'react'
 import House from './House'
 import Trails from './Trails'
-import Overlay from './Overlay'
+import Placeholder from './Placeholder'
 
 
 
@@ -40,9 +39,11 @@ export default function Experience()
 
       <Trails />
 
-      <Center>
-        <House position={[0, - 1, 0]} scale={1} rotation={[0, Math.PI, 0]} />
-      </Center>
+      <Suspense fallback={ <Placeholder position={[0, -.5, 0]} scale={[2, 2, 2]} /> }>
+        <Center>
+          <House position={[0, - 1, 0]} scale={1} rotation={[0, Math.PI, 0]} />
+        </Center>
+      </Suspense>
 
     </>
 }
