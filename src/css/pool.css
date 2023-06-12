@@ -48,7 +48,7 @@ h1, h2, h3, h4, p, a {
 
 /* Video Content Section */
 .content-container-outer {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
 }
 .center-title {
@@ -64,7 +64,8 @@ h1, h2, h3, h4, p, a {
 }
 .content-container-outer .content-container-inner {
   display: grid;
-  grid-template-columns: .5fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 .content-container-description {
   display: flex;

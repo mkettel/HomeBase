@@ -15,8 +15,8 @@ export default function Pool() {
     },
     {
       id: 2,
-      url: './videos/pool/pool-robot-cleaning.mp4',
-      title: 'Post Party & Rain'
+      url: 'https://www.youtube.com/embed/BKxCOasoqsc',
+      title: 'Backwashing the Pool Pump'
     },
     {
       id: 3,
@@ -49,8 +49,6 @@ export default function Pool() {
     )
   })
 
-  const secondVideo = () => videos[1]
-  console.log(secondVideo());
 
   return <>
 
@@ -68,18 +66,19 @@ export default function Pool() {
 
     <div className="content-container-outer">
       <div className="content-container center-title">
-        <h2 className='subject-title'>{videos[0].title}</h2>
+        <h2 className='subject-title'>{videos[1].title}</h2>
       </div>
       <div className="content-container-inner">
         <div className="content-container-video">
-          <video
+          {/* <video
             className='video-player'
             controls
             height={250}
             width={250}
           >
-            <source src={videos[0].url} type="video/mp4" />
-          </video>
+            <source src={videos[1].url} type="video/mp4" />
+          </video> */}
+          <iframe width="560" height="315" src={videos[1].url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen ></iframe>
         </div>
         <div className="content-container-description">
           <div className="description-summary">
