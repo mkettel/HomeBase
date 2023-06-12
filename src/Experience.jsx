@@ -2,10 +2,8 @@ import { Trail, useMatcapTexture ,Center, Text3D, OrbitControls, MeshTransmissio
 import { Perf } from 'r3f-perf'
 import * as THREE from 'three'
 import { useRef, Suspense } from 'react'
-import { useFrame } from '@react-three/fiber'
 import House from './House'
 import Trails from './Trails'
-import Overlay from './Overlay'
 import Placeholder from './Placeholder'
 
 
