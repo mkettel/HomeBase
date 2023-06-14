@@ -97,11 +97,23 @@ export function SeasonSelector(props) {
       <a href="/">House</a>
     </div>
     <div className="header-container">
-      <h1 className='header-container-title'>Pool Season Selector</h1>
+      <h1 className='header-container-title'>Select Your Season</h1>
     </div>
     <div className="season-selector-container">
-      <button className="season-button" onClick={() => props.setSeason('spring')}>spring</button>
-      <button className="season-button" onClick={() => props.setSeason('summer')}> <span className='summer-span'>s</span><span className='summer-span'>u</span><span className='summer-span'>m</span><span className='summer-span'>m</span><span className='summer-span'>e</span><span className='summer-span'>r</span></button>
+      <button className="season-button" onClick={() => props.setSeason('spring')}> <span className='summer-span'>s</span>
+      <span className='summer-span'>p</span>
+      <span className='summer-span'>r</span>
+      <span className='summer-span'>i</span>
+      <span className='summer-span'>n</span>
+      <span className='summer-span'>g</span>
+      </button>
+      <button className="season-button" onClick={() => props.setSeason('summer')}> <span className='summer-span'>s</span>
+      <span className='summer-span'>u</span>
+      <span className='summer-span'>m</span>
+      <span className='summer-span'>m</span>
+      <span className='summer-span'>e</span>
+      <span className='summer-span'>r</span>
+      </button>
     </div>
 
   </>
