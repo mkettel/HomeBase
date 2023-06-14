@@ -15,8 +15,7 @@
 :root {
   /* background-color: #335C67/; */
   background-color: #605C4E;
-  background-color: #AA998F;
-  background-color: #F9EAE1;
+  background-color: #FFE8D6;
 }
 h1, h2, h3, h4, p, a {
   font-family: 'Cabinet Grotesk', sans-serif;
@@ -46,6 +45,7 @@ h1, h2, h3, h4, p, a {
 .header-container .header-container-title {
   font-size: 42px;
   font-weight: 400;
+  color: #6B705C;
   color: #7D4F50;
 }
 /* Layout for the Season Buttons */
@@ -63,24 +63,20 @@ h1, h2, h3, h4, p, a {
   font-weight: 300;
   font-family: 'Cabinet Grotesk', sans-serif;
   margin: 5vh 0px;
-  /* border-radius: 10px; */
   transition: .3s;
-}
-.season-selector-container .season-button:nth-child(2) {
-  border-left: 2px solid black;
 }
 .season-selector-container .season-button:hover {
   cursor: pointer;
   /* background-color: #e4c8b6; */
   transition: .3s;
 }
+.season-selector-container .season-button:nth-child(2) {
+  border-left: 2px solid #7D4F50;
+}
 .season-selector-container .season-button .summer-span {
   display: inline-block;
   transition: .3s;
-}
-.season-selector-container .season-button:nth-child(2):hover {
-  transition: .3s;
-
+  color: #7D4F50;
 }
 /* Child elements moving SUMMER */
 .season-selector-container .season-button:hover .summer-span:nth-child(1) {
@@ -113,3 +109,26 @@ h1, h2, h3, h4, p, a {
   transition: .3s;
   color: #0077b6;
 }
+
+/* Page Center Container for pages under construction */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.seasons-back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #7D4F50;
+}
+.seasons-back-button:hover {
+  cursor: pointer;
+  color: #0077b6;
+}
+
+/* Summer Videos Layout */
