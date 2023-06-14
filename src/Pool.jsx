@@ -1,13 +1,14 @@
 import React from 'react';
 import './css/pool.css'
 import Overlay from './Overlay.jsx'
+import { useState } from 'react';
 
 
 
 
 export default function Pool() {
 
-  const videos = [
+  const poolVideos = [
     {
       id: 1,
       url: './videos/pool/cl-floating-chamber.mp4',
@@ -29,30 +30,27 @@ export default function Pool() {
       title: 'Pool Pump Pressure'
     }
   ]
-  console.log(videos[0].url);
 
-  // Maps Through videos array and returns a video element for each video
-  const video = () => videos.map((video) => {
+  const [season, setSeason] = useState('season');
+
+
+
+  if (season === 'season') {
     return (
-      <div className="video" key={video.id}>
-        <h2>{video.title}</h2>
-        <video
-        className='video-player'
-        controls
-        height={250}
-        width={250}
-        >
-          <source src={video.url} type="video/mp4" />
-        </video>
-        <p className='description'>{video.description}</p>
-      </div>
+      <SeasonSelector season={season} setSeason={setSeason} />
     )
-  })
+  } else if (season === 'summer') {
+    return (
+      <SummerVideos season={season} setSeason={setSeason} />
+    )
+  } else if (season === 'spring') {
+    return (
+      <SpringVideos season={season} setSeason={setSeason} />
+    )
+  }
 
 
-  return <>
-
-    <div className="home-link">
+    {/* <div className="home-link">
       <a href="/">House</a>
     </div>
 
@@ -66,19 +64,11 @@ export default function Pool() {
 
     <div className="content-container-outer">
       <div className="content-container center-title">
-        <h2 className='subject-title'>{videos[1].title}</h2>
+        <h2 className='subject-title'>{poolVideos[1].title}</h2>
       </div>
       <div className="content-container-inner">
         <div className="content-container-video">
-          {/* <video
-            className='video-player'
-            controls
-            height={250}
-            width={250}
-          >
-            <source src={videos[1].url} type="video/mp4" />
-          </video> */}
-          <iframe width="560" height="315" src={videos[1].url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen ></iframe>
+          <iframe width="560" height="315" src={poolVideos[1].url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen ></iframe>
         </div>
         <div className="content-container-description">
           <div className="description-summary">
@@ -93,8 +83,40 @@ export default function Pool() {
         </div>
       </div>
 
-    </div>
+    </div> */}
 
 
+
+}
+
+// Season Selector
+export function SeasonSelector(props) {
+
+  return <>
+
+    <h1>Season Selector</h1>
+    <button onClick={() => props.setSeason('spring')}>spring</button>
+    <button onClick={() => props.setSeason('summer')}>summer</button>
+  </>
+}
+
+// Summer Videos
+export function SummerVideos(props) {
+
+
+  return <>
+    <h2>Videos for Summer Pool action</h2>
+    <button onClick={() => props.setSeason('season')}>seasons</button>
+
+  </>
+}
+
+// Spring Videos
+export function SpringVideos(props) {
+
+
+  return <>
+    <h2>Videos for Spring Pool action</h2>
+    <button onClick={() => props.setSeason('season')}>seasons</button>
   </>
 }
