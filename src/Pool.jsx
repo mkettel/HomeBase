@@ -34,7 +34,7 @@ export default function Pool() {
   const [season, setSeason] = useState('season');
 
 
-
+  // Setting season state
   if (season === 'season') {
     return (
       <SeasonSelector season={season} setSeason={setSeason} />
@@ -93,10 +93,17 @@ export default function Pool() {
 export function SeasonSelector(props) {
 
   return <>
+    <div className="home-link">
+      <a href="/">House</a>
+    </div>
+    <div className="header-container">
+      <h1 className='header-container-title'>Pool Season Selector</h1>
+    </div>
+    <div className="season-selector-container">
+      <button className="season-button" onClick={() => props.setSeason('spring')}>spring</button>
+      <button className="season-button" onClick={() => props.setSeason('summer')}> <span className='summer-span'>s</span><span className='summer-span'>u</span><span className='summer-span'>m</span><span className='summer-span'>m</span><span className='summer-span'>e</span><span className='summer-span'>r</span></button>
+    </div>
 
-    <h1>Season Selector</h1>
-    <button onClick={() => props.setSeason('spring')}>spring</button>
-    <button onClick={() => props.setSeason('summer')}>summer</button>
   </>
 }
 

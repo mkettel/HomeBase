@@ -5,105 +5,99 @@
 /* font-family: 'Chillax', sans-serif; */
 /* font-family: 'Cabinet Grotesk', sans-serif; */
 
+/* Colors */
+/* old rose: CC8B86 */
+/* linen: F9EAE1 */
+/* rose taupe: 7D4F50 */
+/* dun: D1BE9C */
+/* cinnemon: AA998F */
+
 :root {
   /* background-color: #335C67/; */
   background-color: #605C4E;
+  background-color: #AA998F;
+  background-color: #F9EAE1;
 }
 h1, h2, h3, h4, p, a {
   font-family: 'Cabinet Grotesk', sans-serif;
 }
 
-/* Header Component */
-.header-container {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-top: 10px;
-}
-.header-container .header-text {
-  display: flex;
-  flex-direction: column;
-}
-.header-container .header .header-text h1 {
-  color: #EAFFDA;
-  font-size: 48px;
-  font-weight: 450;
-}
-/* ------------------- */
-
-.home-link {
-  position: absolute;
-  top: 20px;
-  left: 40px;
-  z-index: 100;
-}
 .home-link a {
   text-decoration: none;
-  color: #EAFFDA;
-  font-size: 22px;
-  font-family: 'Cabinet Grotesk', sans-serif;
+  color: #7D4F50;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
-/* Video Content Section */
-.content-container-outer {
-  max-width: 1300px;
-  margin: auto;
-}
-.center-title {
+/* Season Selector Page */
+.header-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  height: 20vh;
 }
-.subject-title {
-  font-size: 32px;
-  font-weight: 450;
-  color: #EAFFDA;
+.header-container .header-container-title {
+  font-size: 42px;
+  font-weight: 400;
 }
-.content-container-outer .content-container-inner {
+
+.season-selector-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
 }
-.content-container-description {
-  display: flex;
-  flex-direction: column;
-}
-.content-container-description .description-summary {
-  font-size: 18px;
+.season-selector-container .season-button {
+  height: 60vh;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  text-transform: uppercase;
   font-weight: 300;
-  color: black;
-  margin-bottom: 10px;
   font-family: 'Cabinet Grotesk', sans-serif;
-}
-.content-container-description .description-steps {
-  font-size: 18px;
-  font-weight: 300;
-  color: black;
-  font-family: 'Cabinet Grotesk', sans-serif;
-}
+  margin: 5vh 0px;
 
-
-
-
-/* The actual videos Box for each one */
-.video {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* margin: 0px 10px; */
 }
-.video h2 {
-  font-size: 24px;
-  font-weight: 450;
+.season-selector-container .season-button:nth-child(2) {
+  border-left: 2px solid black;
 }
-.video .description {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: 300;
-  text-align: center;
-  width: 300px;
+.season-selector-container .season-button:hover {
+  cursor: pointer;
+}
+.season-selector-container .season-button .summer-span {
+  display: inline-block;
+  transition: .3s;
+}
+.season-selector-container .season-button:nth-child(2):hover {
+  transition: .3s;
+}
+/* Child elements moving SUMMER */
+.season-selector-container .season-button:hover .summer-span:nth-child(1) {
+  transform: rotate(20deg) translateX(-5px);
+  transition: .3s;
+  color: #CC8B86;
+}
+.season-selector-container .season-button:hover .summer-span:nth-child(2) {
+  transform: rotate(-20deg) translateY(-2px);
+  transition: .3s;
+  color: #D1BE9C;
+}
+.season-selector-container .season-button:hover .summer-span:nth-child(3) {
+  transform: rotate(-10deg) translateY(7px);
+  transition: .3s;
+  color: #f9dc5c;
+}
+.season-selector-container .season-button:hover .summer-span:nth-child(4) {
+  transform: rotate(10deg) translateY(-4px);
+  transition: .3s;
+  color: #bf3100;
+}
+.season-selector-container .season-button:hover .summer-span:nth-child(5) {
+  transform: rotate(-10deg) translateY(7px);
+  transition: .3s;
+  color: #d34f73;
+}
+.season-selector-container .season-button:hover .summer-span:nth-child(6) {
+  transform: rotate(-10deg) translateY(-5px);
+  transition: .3s;
+  color: #0077b6;
 }
