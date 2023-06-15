@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/pool.css'
+import './css/yard.css'
 import Overlay from './Overlay.jsx'
 import { useState } from 'react';
 
