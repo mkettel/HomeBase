@@ -49,63 +49,118 @@ h1, h2, h3, h4, p, a, li {
   color: #7D4F50;
 }
 /* Layout for the Season Buttons */
-.season-selector-container {
+.season-selector-container-yard {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  /* gap: 10px; */
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+  padding-top: 25px;
+
 }
-.season-selector-container .season-button {
-  height: 60vh;
+.season-selector-container-yard .season-button {
+  height: 30vh;
   background-color: transparent;
   border: none;
   font-size: 36px;
   text-transform: uppercase;
   font-weight: 300;
   font-family: 'Cabinet Grotesk', sans-serif;
-  margin: 5vh 0px;
+  margin: 0vh 0px;
   transition: .3s;
 }
-.season-selector-container .season-button:hover {
+.season-selector-container-yard .season-button:hover {
   cursor: pointer;
   /* background-color: #e4c8b6; */
   transition: .3s;
 }
-.season-selector-container .season-button:nth-child(2) {
-  border-left: 2px solid #7D4F50;
+.season-selector-container-yard .season-button:nth-child(1) {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
 }
-.season-selector-container .season-button .summer-span {
+.season-selector-container-yard .season-button:nth-child(2) {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.season-selector-container-yard .season-button:nth-child(3) {
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+.season-selector-container-yard .season-button:nth-child(4) {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.season-selector-container-yard .season-button .summer-span {
   display: inline-block;
   transition: .3s;
   color: #7D4F50;
 }
-/* Child elements moving SUMMER */
-.season-selector-container .season-button:hover .summer-span:nth-child(1) {
+/* Child elements moving SUMMER / SPRING */
+.season-selector-container-yard .season-button:hover .summer-span:nth-child(1) {
   transform: rotate(20deg) translateX(-5px);
   transition: .3s;
   color: #CC8B86;
 }
-.season-selector-container .season-button:hover .summer-span:nth-child(2) {
+.season-selector-container-yard .season-button:hover .summer-span:nth-child(2) {
   transform: rotate(-20deg) translateY(-2px);
   transition: .3s;
   color: #D1BE9C;
 }
-.season-selector-container .season-button:hover .summer-span:nth-child(3) {
+.season-selector-container-yard .season-button:hover .summer-span:nth-child(3) {
   transform: rotate(-10deg) translateY(7px);
   transition: .3s;
   color: #f9dc5c;
 }
-.season-selector-container .season-button:hover .summer-span:nth-child(4) {
+.season-selector-container-yard .season-button:hover .summer-span:nth-child(4) {
   transform: rotate(10deg) translateY(-4px);
   transition: .3s;
   color: #bf3100;
 }
-.season-selector-container .season-button:hover .summer-span:nth-child(5) {
+.season-selector-container-yard .season-button:hover .summer-span:nth-child(5) {
   transform: rotate(-10deg) translateY(7px);
   transition: .3s;
   color: #d34f73;
 }
-.season-selector-container .season-button:hover .summer-span:nth-child(6) {
+.season-selector-container-yard .season-button:hover .summer-span:nth-child(6) {
   transform: rotate(-10deg) translateY(-5px);
+  transition: .3s;
+  color: #0077b6;
+}
+/* CHILD ELEMENTS MOVING FALL */
+.season-selector-container-yard .season-button .fall-span {
+  display: inline-block;
+  transition: .3s;
+  color: #7D4F50;
+}
+.season-selector-container-yard .season-button:hover .fall-span:nth-child(1) {
+  transform: rotate(9deg) translateY(8px) translateX(-8px);
+  transition: .3s;
+  color: #5f81ea;
+}
+.season-selector-container-yard .season-button:hover .fall-span:nth-child(2) {
+  transform: rotate(-15deg) translateY(12px) translateX(-9px);
+  transition: .3s;
+  color: #ff0000;
+}
+.season-selector-container-yard .season-button:hover .fall-span:nth-child(3) {
+  transform: rotate(-10deg) translateY(7px);
+  transition: .3s;
+  color: #fdd522;
+}
+.season-selector-container-yard .season-button:hover .fall-span:nth-child(4) {
+  transform: rotate(10deg) translateY(9px) translateX(10px);
+  transition: .3s;
+  color: #e58620;
+}
+.season-selector-container-yard .season-button:hover .fall-span:nth-child(5) {
+  transform: rotate(-10deg) translateY(7px) translateX(10px);
+  transition: .3s;
+  color: #d34f73;
+}
+.season-selector-container-yard .season-button:hover .fall-span:nth-child(6) {
+  transform: rotate(15deg) translateY(-2px) translateX(15px);
   transition: .3s;
   color: #0077b6;
 }
@@ -171,7 +226,7 @@ h1, h2, h3, h4, p, a, li {
     height: 10vh;
     margin-top: 10vh;
   }
-  .season-selector-container .season-button {
+  .season-selector-container-yard .season-button {
     font-size: 28px;
   }
 
