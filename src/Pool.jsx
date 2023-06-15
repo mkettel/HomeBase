@@ -88,6 +88,21 @@ export function SummerVideos(props) {
       id: 3,
       url: 'https://www.youtube.com/embed/FZxjm10uZfw',
       title: 'Backwashing Part 2'
+    },
+    {
+      id: 4,
+      url: 'https://www.youtube.com/embed/LS7lhEOAIkc',
+      title: 'Using the Pool Robot'
+    },
+    {
+      id: 5,
+      url: 'https://www.youtube.com/embed/SA7y3CsX_C4',
+      title: 'Ceaning the Robot'
+    },
+    {
+      id: 6,
+      url: 'https://www.youtube.com/embed/vwXOUYcozJI',
+      title: 'Pool Breaker Box'
     }
   ]
 
@@ -113,17 +128,14 @@ export function VideoPlayer(props) {
     <div className="content-container-layout">
       {props.summerPoolVideos.map((video) => (
         <div className="content-container-card">
-          <h2 key={video.id}>{video.title}</h2>
-          <iframe width="300" height="315" src={video.url} title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <h2 key={video.id} className='center'>{video.title}</h2>
+          <iframe className='video' width="100%" height="315" src={video.url} title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           {video.summary && (
-            <p>{video.summary}</p>
+            <p className='center'>{video.summary}</p>
           )}
         </div>
       ))}
     </div>
   </div>
-
-
-
   </>
 }
