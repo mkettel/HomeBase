@@ -81,33 +81,37 @@ export function SummerVideos(props) {
       id: 1,
       url: 'https://www.youtube.com/embed/9VUAWGzlDsk',
       title: 'Floating Chlorine Chamber',
-      summary: 'The chamber can hold up to 6 tablets and will slowly release chlorine into the pool to keep the ph lower'
+      summary: 'The chamber can hold up to 6 tablets and will slowly release chlorine into the pool to keep the ph lower.'
     },
     {
       id: 2,
       url: 'https://www.youtube.com/embed/dFaJQLNz4s0',
       title: 'Backwashing the Pool Pump',
-      summary: 'As the pool pump reaches a psi of 25, you must backwash to protect it.'
+      summary: 'Once the pump reaches a pressure of 20 lbs you must backwash. Take the blue hose and keep FLAT to avoid pressure build up and run out to the tube on the side yard.'
     },
     {
       id: 3,
       url: 'https://www.youtube.com/embed/FZxjm10uZfw',
-      title: 'Backwashing Part 2'
+      title: 'Backwashing Start',
+      steps: ['Turn off pump', 'Move selector clockwise to backwash', 'Turn pump on', 'Discharge for 1 min or so']
     },
     {
       id: 4,
       url: 'https://www.youtube.com/embed/LS7lhEOAIkc',
-      title: 'Using the Pool Robot'
+      title: 'Using the Pool Robot',
+      summary: 'Throw the robot in with plenty of slack on the cable. Turn the robot on with the power button on the box. It will run for 2 hours. Do it once per day in spring and early summer.'
     },
     {
       id: 5,
       url: 'https://www.youtube.com/embed/SA7y3CsX_C4',
-      title: 'Ceaning the Robot'
+      title: 'Ceaning the Robot',
+      summary: 'Pop off the filter cover. If they are dirty just rinse with the hose on a lighter setting to protect the fabric of the filter to get it all cleaned up and ready to go.'
     },
     {
       id: 6,
       url: 'https://www.youtube.com/embed/vwXOUYcozJI',
-      title: 'Pool Breaker Box'
+      title: 'Pool Breaker Box',
+      summary: 'Down is OFF, Up is ON. Shut the pump off for a few hours during the hottest hours of the day to save pump lifetime and electric cost.'
     }
   ]
 
@@ -146,6 +150,13 @@ export function VideoPlayer(props) {
           </iframe>
           {video.summary && (
             <p className='center'>{video.summary}</p>
+          )}
+          {video.steps && (
+            <ol>
+              {video.steps.map((step, index) => (
+                <li key={index}>{step}</li>
+              ))}
+            </ol>
           )}
         </div>
       ))}
