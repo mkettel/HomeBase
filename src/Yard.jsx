@@ -22,6 +22,16 @@ export default function Yard() {
     return (
       <SpringVideos season={season} setSeason={setSeason} />
     )
+  } else if (season === 'fall') {
+    return (
+      <FallVideos season={season} setSeason={setSeason} />
+    )
+  } else if (season === 'winter') {
+    return (
+      <WinterVideos season={season} setSeason={setSeason} />
+    )
+  } else {
+    return null
   }
 }
 
@@ -35,7 +45,7 @@ export function SeasonSelector(props) {
     <div className="header-container">
       <h1 className='header-container-title'>Select Your Yard Season</h1>
     </div>
-    <div className="season-selector-container">
+    <div className="season-selector-container-yard">
       <button className="season-button" onClick={() => props.setSeason('spring')}> <span className='summer-span'>s</span>
       <span className='summer-span'>p</span>
       <span className='summer-span'>r</span>
@@ -50,6 +60,20 @@ export function SeasonSelector(props) {
       <span className='summer-span'>e</span>
       <span className='summer-span'>r</span>
       </button>
+      <button className="season-button" onClick={() => props.setSeason('fall')}>
+      <span className='fall-span'>f</span>
+      <span className='fall-span'>a</span>
+      <span className='fall-span'>l</span>
+      <span className='fall-span'>l</span>
+      </button>
+      <button className="season-button" onClick={() => props.setSeason('winter')}>
+      <span className='fall-span'>w</span>
+      <span className='fall-span'>i</span>
+      <span className='fall-span'>n</span>
+      <span className='fall-span'>t</span>
+      <span className='fall-span'>e</span>
+      <span className='fall-span'>r</span>
+      </button>
     </div>
   </>
 }
@@ -57,6 +81,15 @@ export function SeasonSelector(props) {
 
 // Spring Videos to add with other video object
 export function SpringVideos(props) {
+
+  const videos = [
+    {
+      id: 1,
+      url: 'https://www.youtube.com/embed/9VUAWGzlDsk',
+      title: 'Floating Chlorine Chambersssss yoooooooo',
+      summary: 'The chamber can hold up to 6 tablets and will slowly release chlorine into the pool to keep the ph lower'
+    }
+  ]
 
   return <>
     <div className="page-container">
@@ -68,13 +101,16 @@ export function SpringVideos(props) {
     <p>Under Construction Check Back Soon</p>
     <button onClick={() => props.setSeason('season')}>Back to Seasons</button>
   </div>
+
+  <VideoPlayer videos={videos} />
+
   </>
 }
 
-// Summer Videos
+// SUMMER VIDEOS
 export function SummerVideos(props) {
 
-  const summerPoolVideos = [
+  const videos = [
     {
       id: 1,
       url: 'https://www.youtube.com/embed/9VUAWGzlDsk',
@@ -90,20 +126,50 @@ export function SummerVideos(props) {
       <h1 className='header-container-title'>Summer Yard Videos</h1>
     </div>
 
-    <VideoPlayer summerPoolVideos={summerPoolVideos} />
+    <VideoPlayer videos={videos} />
 
+  </>
+}
+// FALL VIDEOS
+export function FallVideos(props) {
+
+  return <>
+    <div className="page-container">
+      <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
+
+    <div className="header-container">
+      <h1 className='header-container-title'>Fall Yard Videos</h1>
+    </div>
+    <p>Under Construction Check Back Soon</p>
+    <button onClick={() => props.setSeason('season')}>Back to Seasons</button>
+  </div>
+  </>
+}
+// WINTER VIDEOS
+export function WinterVideos(props) {
+
+  return <>
+    <div className="page-container">
+      <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
+
+    <div className="header-container">
+      <h1 className='header-container-title'>Winter Yard Videos</h1>
+    </div>
+    <p>Under Construction Check Back Soon</p>
+    <button onClick={() => props.setSeason('season')}>Back to Seasons</button>
+  </div>
   </>
 }
 
 export function VideoPlayer(props) {
-  console.log(props.summerPoolVideos.map((video) => video.title));
+  console.log(props.videos.map((video) => video.title));
 
   return <>
 
   {/* Video Component */}
   <div className="content-container-outer">
     <div className="content-container-layout">
-      {props.summerPoolVideos.map((video) => (
+      {props.videos.map((video) => (
         <div className="content-container-card">
           <h2 key={video.id} className='video-title center'>{video.title}</h2>
           <iframe
