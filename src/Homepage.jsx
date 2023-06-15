@@ -12,10 +12,10 @@ export default function Homepage() {
     <div className="d-root">
       <Canvas
         camera={ {
-            fov: 45,
+            fov: 50,
             near: 0.1,
             far: 200,
-            position: [ -4, 2, 13 ]
+            position: [ -4, 2, 14 ]
         } }
       >
         <Experience />

@@ -136,6 +136,7 @@ h1, h2, h3, h4, p, a {
 .content-container-outer {
   max-width: 1200px;
   margin: auto;
+  padding-bottom: 40px;
 }
 .content-container-title {
   display: flex;
@@ -153,6 +154,10 @@ h1, h2, h3, h4, p, a {
 }
 .content-container-layout .video {
   border-radius: 10px;
+}
+.content-container-layout p {
+  font-size: 18px;
+  color: #6B705C;
 }
 
 
@@ -187,6 +192,9 @@ h1, h2, h3, h4, p, a {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     gap: 10px;
+  }
+  .content-container-layout p {
+    font-size: 16px;
   }
   .video-title {
     font-size: 20px;

@@ -26,6 +26,9 @@ export default function House(props) {
   const poolClick = () => {
     window.location.href = "/pool";
   }
+  const yardClick = () => {
+    window.location.href = "/yard";
+  }
 
 
   // States
@@ -193,12 +196,18 @@ export default function House(props) {
         material={nodes.tree001.material}
         position={[-3, -0.01, -1.31]}
         rotation={[-0.08, -0.26, -0.06]}
+        onClick={yardClick}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
       >
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.leaves001.geometry}
           material={nodes.leaves001.material}
+          onClick={yardClick}
+          onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
         />
       </mesh>
       <mesh
@@ -209,12 +218,18 @@ export default function House(props) {
         position={[2.64, -0.04, 1.32]}
         rotation={[-0.06, -0.42, -0.08]}
         scale={0.81}
+        onClick={yardClick}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
       >
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.leaves.geometry}
           material={nodes.leaves.material}
+          onClick={yardClick}
+          onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
         />
       </mesh>
       <mesh
@@ -225,12 +240,18 @@ export default function House(props) {
         position={[2.92, 0.04, -1.8]}
         rotation={[-0.04, -0.19, 0]}
         scale={0.41}
+        onClick={yardClick}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
       >
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.leaves002.geometry}
           material={nodes.leaves002.material}
+          onClick={yardClick}
+          onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
         />
       </mesh>
     </group>

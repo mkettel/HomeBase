@@ -17,20 +17,65 @@
 /* font-family: 'Ranade', sans-serif; */
 /* font-family: 'Chillax', sans-serif; */
 /* font-family: 'Cabinet Grotesk', sans-serif; */
+.overlay-description {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  z-index: 100;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  max-width: 150px;
+}
+.main-header {
+  color: rgb(211, 211, 241);
+  font-size: 18px;
+  text-decoration: none;
+}
 
-
-.test-button {
+.pool-button {
   position: absolute;
   bottom: 20px;
   left: 40px;
   z-index: 100;
   font-family: 'Cabinet Grotesk', sans-serif;
 }
-.test-button .nav {
+.yard-button {
+  position: absolute;
+  bottom: 20px;
+  left: 90px;
+  z-index: 100;
+  font-family: 'Cabinet Grotesk', sans-serif;
+}
+.nav {
   color: rgb(211, 211, 241);
   font-size: 18px;
   text-decoration: none;
 }
-.test-button .nav:hover {
+.nav:hover {
   color: rgb(176, 164, 209);
+}
+
+
+@media only screen and  (min-width: 200px) and (max-width: 700px) {
+  .overlay-description {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    z-index: 100;
+    font-family: 'Cabinet Grotesk', sans-serif;
+    max-width: 150px;
+  }
+  .pool-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+    font-family: 'Cabinet Grotesk', sans-serif;
+  }
+  .yard-button {
+    position: absolute;
+    bottom: 20px;
+    left: 70px;
+    z-index: 100;
+    font-family: 'Cabinet Grotesk', sans-serif;
+  }
 }
