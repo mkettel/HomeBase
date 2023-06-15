@@ -4,9 +4,7 @@ import Overlay from './Overlay.jsx'
 import { useState } from 'react';
 
 
-
-
-export default function Pool() {
+export default function Yard() {
 
 
   const [season, setSeason] = useState('season');
@@ -35,7 +33,7 @@ export function SeasonSelector(props) {
       <a href="/">House</a>
     </div>
     <div className="header-container">
-      <h1 className='header-container-title'>Select Your Pool Season</h1>
+      <h1 className='header-container-title'>Select Your Yard Season</h1>
     </div>
     <div className="season-selector-container">
       <button className="season-button" onClick={() => props.setSeason('spring')}> <span className='summer-span'>s</span>
@@ -65,7 +63,7 @@ export function SpringVideos(props) {
       <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
 
     <div className="header-container">
-      <h1 className='header-container-title'>Spring Pool & Hot Tub Videos</h1>
+      <h1 className='header-container-title'>Spring Yard Videos</h1>
     </div>
     <p>Under Construction Check Back Soon</p>
     <button onClick={() => props.setSeason('season')}>Back to Seasons</button>
@@ -82,32 +80,6 @@ export function SummerVideos(props) {
       url: 'https://www.youtube.com/embed/9VUAWGzlDsk',
       title: 'Floating Chlorine Chamber',
       summary: 'The chamber can hold up to 6 tablets and will slowly release chlorine into the pool to keep the ph lower'
-    },
-    {
-      id: 2,
-      url: 'https://www.youtube.com/embed/dFaJQLNz4s0',
-      title: 'Backwashing the Pool Pump',
-      summary: 'As the pool pump reaches a psi of 25, you must backwash to protect it.'
-    },
-    {
-      id: 3,
-      url: 'https://www.youtube.com/embed/FZxjm10uZfw',
-      title: 'Backwashing Part 2'
-    },
-    {
-      id: 4,
-      url: 'https://www.youtube.com/embed/LS7lhEOAIkc',
-      title: 'Using the Pool Robot'
-    },
-    {
-      id: 5,
-      url: 'https://www.youtube.com/embed/SA7y3CsX_C4',
-      title: 'Ceaning the Robot'
-    },
-    {
-      id: 6,
-      url: 'https://www.youtube.com/embed/vwXOUYcozJI',
-      title: 'Pool Breaker Box'
     }
   ]
 
@@ -115,7 +87,7 @@ export function SummerVideos(props) {
     <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
 
     <div className="header-container">
-      <h1 className='header-container-title'>Summer Pool & Hot Tub Videos</h1>
+      <h1 className='header-container-title'>Summer Yard Videos</h1>
     </div>
 
     <VideoPlayer summerPoolVideos={summerPoolVideos} />

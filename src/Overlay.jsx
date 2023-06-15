@@ -13,17 +13,13 @@ export default function Overlay() {
 
 
     <div className="yard-button">
-      <a className='nav' href="/pool">Yard</a>
+      <a className='nav' href="/yard">Yard</a>
     </div>
 
     {/* Description */}
     <div className="overlay-description">
-      <p className='main-header' href="/pool">HomeBase</p>
+      <p className='main-header'>HomeBase</p>
     </div>
-
-
-
-
 
   </>
 }
