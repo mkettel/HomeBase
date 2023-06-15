@@ -82,7 +82,8 @@ export function SummerVideos(props) {
     {
       id: 2,
       url: 'https://www.youtube.com/embed/dFaJQLNz4s0',
-      title: 'Backwashing the Pool Pump'
+      title: 'Backwashing the Pool Pump',
+      summary: 'As the pool pump reaches a psi of 25, you must backwash to protect it.'
     },
     {
       id: 3,
@@ -128,7 +129,7 @@ export function VideoPlayer(props) {
     <div className="content-container-layout">
       {props.summerPoolVideos.map((video) => (
         <div className="content-container-card">
-          <h2 key={video.id} className='center'>{video.title}</h2>
+          <h2 key={video.id} className='video-title center'>{video.title}</h2>
           <iframe className='video' width="100%" height="315" src={video.url} title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           {video.summary && (
             <p className='center'>{video.summary}</p>

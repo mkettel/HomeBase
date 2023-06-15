@@ -154,3 +154,31 @@ h1, h2, h3, h4, p, a {
 .content-container-layout .video {
   border-radius: 10px;
 }
+
+
+@media only screen and  (min-width: 200px) and (max-width: 700px) {
+
+  .seasons-back-button {
+    top: 15px;
+    left: 15px;
+    font-size: 16px;
+  }
+
+  .header-container .header-container-title {
+    font-size: 24px;
+  }
+  .content-container-outer {
+    max-width: 350px;
+    margin: auto;
+  }
+  .content-container-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 10px;
+  }
+  .video-title {
+    font-size: 20px;
+  }
+
+}
