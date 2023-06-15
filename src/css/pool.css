@@ -158,6 +158,16 @@ h1, h2, h3, h4, p, a {
 
 @media only screen and  (min-width: 200px) and (max-width: 700px) {
 
+  /* Seasons Page */
+  .header-container {
+    height: 10vh;
+    margin-top: 10vh;
+  }
+  .season-selector-container .season-button {
+    font-size: 28px;
+  }
+
+  /* Summer Video Page */
   .seasons-back-button {
     top: 15px;
     left: 15px;
@@ -166,6 +176,7 @@ h1, h2, h3, h4, p, a {
 
   .header-container .header-container-title {
     font-size: 24px;
+    text-align: center;
   }
   .content-container-outer {
     max-width: 350px;
