@@ -22,7 +22,6 @@ h2, h3, h4, p, a, li {
 }
 h1 {
   font-family: 'Chillax', sans-serif;
-
 }
 
 .home-link a {
@@ -72,12 +71,12 @@ h1 {
   font-weight: 300;
   font-family: 'Cabinet Grotesk', sans-serif;
   margin: 0vh 0px;
-  transition: .3s;
+  /* transition: .3s; */
 }
 .season-selector-container-yard .season-button:hover {
   cursor: pointer;
   /* background-color: #e4c8b6; */
-  transition: .3s;
+  /* transition: .3s; */
 }
 .season-selector-container-yard .season-button:nth-child(1) {
   border-bottom: 1px solid black;
