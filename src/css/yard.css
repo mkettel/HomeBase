@@ -17,8 +17,12 @@
   background-color: #605C4E;
   background-color: #FFE8D6;
 }
-h1, h2, h3, h4, p, a, li {
+h2, h3, h4, p, a, li {
   font-family: 'Cabinet Grotesk', sans-serif;
+}
+h1 {
+  font-family: 'Chillax', sans-serif;
+
 }
 
 .home-link a {
@@ -225,7 +229,6 @@ h1, h2, h3, h4, p, a, li {
   font-size: 26px;
   font-weight: 550;
   color: black;
-
 }
 
 
@@ -248,7 +251,7 @@ h1, h2, h3, h4, p, a, li {
   }
 
   .header-container .header-container-title {
-    font-size: 24px;
+    font-size: 26px;
     text-align: center;
   }
   .content-container-outer {
@@ -266,6 +269,7 @@ h1, h2, h3, h4, p, a, li {
   }
   .video-title {
     font-size: 20px;
+    font-weight: 500;
   }
 
 }
