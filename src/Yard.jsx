@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import './css/yard.css'
 import Overlay from './Overlay.jsx'
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { gsap } from "gsap";
+
 
 
 export default function Yard() {
@@ -9,10 +11,37 @@ export default function Yard() {
 
   const [season, setSeason] = useState('season');
 
+  // GSAP ANIMATIONS FOR SEASONS PAGE
+  const seasonButtonRef = useRef();
+  const headerRef = useRef();
+
+  useLayoutEffect( () => {
+    let ctx = gsap.context(() => {
+
+      // Seasons Button fade effect
+      gsap.from('.season-button', {
+        opacity: 0,
+        ease: 'power1.inOut',
+
+        stagger: 0.5
+      })
+    }, seasonButtonRef)
+
+    // Header effect
+    gsap.from('.header-container-title', {
+      y: -50,
+      yoyo: true,
+      ease: 'back',
+      duration: 1
+    }, headerRef)
+
+    return () => ctx.revert();
+  }, [])
+
   // Setting season state for proper component render
   if (season === 'season') {
     return (
-      <SeasonSelector season={season} setSeason={setSeason} />
+      <SeasonSelector headerRef={headerRef} seasonButtonRef={seasonButtonRef} season={season} setSeason={setSeason} />
     )
   } else if (season === 'summer') {
     return (
@@ -42,10 +71,10 @@ export function SeasonSelector(props) {
     <div className="home-link">
       <a href="/">House</a>
     </div>
-    <div className="header-container">
+    <div ref={props.headerRef} className="header-container">
       <h1 className='header-container-title'>Select Your Yard Season</h1>
     </div>
-    <div className="season-selector-container-yard">
+    <div ref={props.seasonButtonRef} className="season-selector-container-yard">
       <button className="season-button" onClick={() => props.setSeason('spring')}> <span className='summer-span'>s</span>
       <span className='summer-span'>p</span>
       <span className='summer-span'>r</span>

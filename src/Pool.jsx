@@ -12,6 +12,7 @@ export default function Pool() {
 
   const [season, setSeason] = useState('season');
 
+  // GSAP ANIMATIONS FOR SEASONS PAGE
   const seasonButtonRef = useRef();
   const headerRef = useRef();
 
@@ -37,6 +38,9 @@ export default function Pool() {
 
     return () => ctx.revert();
   }, [])
+
+  // GSAP ANIMATIONS FOR SUMMER VIDEOS
+
 
   // Setting season state for proper component render
   if (season === 'season') {
