@@ -28,6 +28,7 @@ h1, h2, h3, h4, p, a, li {
   top: 20px;
   left: 20px;
   font-size: 18px;
+  transition: .3s;
 }
 .home-link a:hover {
   color: #0077b6;
@@ -47,6 +48,7 @@ h1, h2, h3, h4, p, a, li {
   font-weight: 400;
   color: #6B705C;
   color: #7D4F50;
+  /* animation: fade .5s ease-in; */
 }
 /* Layout for the Season Buttons */
 .season-selector-container {
@@ -63,12 +65,13 @@ h1, h2, h3, h4, p, a, li {
   font-weight: 300;
   font-family: 'Cabinet Grotesk', sans-serif;
   margin: 5vh 0px;
-  transition: .3s;
+  /* transition: .3s; */
+  /* animation: fade 1s ease-in; */
 }
 .season-selector-container .season-button:hover {
   cursor: pointer;
   /* background-color: #e4c8b6; */
-  transition: .3s;
+  /* transition: .3s; */
 }
 .season-selector-container .season-button:nth-child(2) {
   border-left: 2px solid #7D4F50;
@@ -108,6 +111,16 @@ h1, h2, h3, h4, p, a, li {
   transform: rotate(-10deg) translateY(-5px);
   transition: .3s;
   color: #0077b6;
+}
+
+/* Season Animations */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Page Center Container for pages under construction */
