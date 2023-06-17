@@ -39,8 +39,6 @@ export default function Pool() {
     return () => ctx.revert();
   }, [])
 
-  // GSAP ANIMATIONS FOR SUMMER VIDEOS
-
 
   // Setting season state for proper component render
   if (season === 'season') {
@@ -148,11 +146,32 @@ export function SummerVideos(props) {
       summary: 'Down is OFF, Up is ON. Shut the pump off for a few hours during the hottest hours of the day to save pump lifetime and electric cost.'
     }
   ]
+    // GSAP ANIMATIONS FOR SUMMER PAGE
+    const headerRef = useRef();
+
+    useLayoutEffect( () => {
+      let ctx = gsap.context(() => {
+
+        // Seasons Button fade effect
+        gsap.from('.header-container-title', {
+          y: -50,
+          yoyo: true,
+          ease: 'back',
+          duration: 1
+        })
+      }, headerRef)
+
+      return () => ctx.revert();
+    }, [])
 
   return <>
-    <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
+    <button
+    className='seasons-back-button'
+    onClick={() => props.setSeason('season')}>
+      Back to Seasons
+    </button>
 
-    <div className="header-container">
+    <div ref={headerRef} className="header-container">
       <h1 className='header-container-title'>Summer Pool & Hot Tub Videos</h1>
     </div>
 
@@ -162,25 +181,41 @@ export function SummerVideos(props) {
 }
 
 export function VideoPlayer(props) {
-  console.log(props.summerPoolVideos.map((video) => video.title));
+
+  const videoPlayerRef = useRef();
+
+  useLayoutEffect( () => {
+    let ctx = gsap.context(() => {
+
+      // Seasons Button fade effect
+      gsap.from('.content-container-card', {
+        opacity: 0,
+        delay: .5,
+        stagger: .3
+      })
+    }, videoPlayerRef)
+
+    return () => ctx.revert();
+  }, [])
 
   return <>
 
   {/* Video Component */}
   <div className="content-container-outer">
-    <div className="content-container-layout">
+    <div ref={videoPlayerRef} className="content-container-layout">
       {props.summerPoolVideos.map((video) => (
         <div className="content-container-card">
-          <h2 key={video.id} className='video-title center'>{video.title}</h2>
+          <h2 className='video-title center'>{video.title}</h2>
           <iframe
+          key={video.id}
           className='video'
           width="100%"
           height="315"
           src={video.url}
           title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
+          frameBorder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          allowFullScreen>
           </iframe>
           {video.summary && (
             <p className='center'>{video.summary}</p>
