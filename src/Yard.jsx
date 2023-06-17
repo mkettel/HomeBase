@@ -75,14 +75,16 @@ export function SeasonSelector(props) {
       <h1 className='header-container-title'>Select Your Yard Season</h1>
     </div>
     <div ref={props.seasonButtonRef} className="season-selector-container-yard">
-      <button className="season-button" onClick={() => props.setSeason('spring')}> <span className='summer-span'>s</span>
+      <button className="season-button" onClick={() => props.setSeason('spring')}>
+      <span className='summer-span'>s</span>
       <span className='summer-span'>p</span>
       <span className='summer-span'>r</span>
       <span className='summer-span'>i</span>
       <span className='summer-span'>n</span>
       <span className='summer-span'>g</span>
       </button>
-      <button className="season-button" onClick={() => props.setSeason('summer')}> <span className='summer-span'>s</span>
+      <button className="season-button" onClick={() => props.setSeason('summer')}>
+      <span className='summer-span'>s</span>
       <span className='summer-span'>u</span>
       <span className='summer-span'>m</span>
       <span className='summer-span'>m</span>

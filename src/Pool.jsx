@@ -45,7 +45,7 @@ export default function Pool() {
     )
   } else if (season === 'summer') {
     return (
-      <SummerVideos season={season} setSeason={setSeason} />
+      <SummerVideos headerRef={headerRef} seasonButtonRef={seasonButtonRef} season={season} setSeason={setSeason} />
     )
   } else if (season === 'spring') {
     return (
