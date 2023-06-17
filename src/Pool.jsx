@@ -6,9 +6,8 @@ import { gsap } from "gsap";
 
 
 
-
+// MAIN COMPONENT FOR THE POOL PAGE
 export default function Pool() {
-
 
   const [season, setSeason] = useState('season');
 
@@ -39,8 +38,7 @@ export default function Pool() {
     return () => ctx.revert();
   }, [])
 
-
-  // Setting season state for proper component render
+  // Sets the state of the season
   if (season === 'season') {
     return (
       <SeasonSelector headerRef={headerRef} seasonButtonRef={seasonButtonRef} season={season} setSeason={setSeason} />
@@ -57,9 +55,7 @@ export default function Pool() {
 }
 
 
-
-
-// Season Selector
+// SEASON SELECTOR PAGE 1---------------------------------------------------------
 export function SeasonSelector(props) {
 
   return <>
@@ -89,14 +85,31 @@ export function SeasonSelector(props) {
 }
 
 
-// Spring Videos to add with other video object
+// SPRING POOL VIDEOS PAGE------------------------------------------------------
 export function SpringVideos(props) {
+
+  const headerRef = useRef();
+
+  useLayoutEffect( () => {
+    let ctx = gsap.context(() => {
+
+      // Seasons Button fade effect
+      gsap.from('.header-container-title', {
+        y: -50,
+        yoyo: true,
+        ease: 'back',
+        duration: 1
+      })
+    }, headerRef)
+
+    return () => ctx.revert();
+  }, [])
 
   return <>
     <div className="page-container">
       <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
 
-    <div className="header-container">
+    <div ref={headerRef}  className="header-container">
       <h1 className='header-container-title'>Spring Pool & Hot Tub Videos</h1>
     </div>
     <p>Under Construction Check Back Soon</p>
@@ -105,7 +118,7 @@ export function SpringVideos(props) {
   </>
 }
 
-// Summer Videos
+// SUMMER VIDEOS PAGE-----------------------------------------------------------
 export function SummerVideos(props) {
 
   const summerPoolVideos = [
@@ -146,13 +159,12 @@ export function SummerVideos(props) {
       summary: 'Down is OFF, Up is ON. Shut the pump off for a few hours during the hottest hours of the day to save pump lifetime and electric cost.'
     }
   ]
-    // GSAP ANIMATIONS FOR SUMMER PAGE
+    // summer page header animation
     const headerRef = useRef();
 
     useLayoutEffect( () => {
       let ctx = gsap.context(() => {
 
-        // Seasons Button fade effect
         gsap.from('.header-container-title', {
           y: -50,
           yoyo: true,
@@ -184,6 +196,7 @@ export function VideoPlayer(props) {
 
   const videoPlayerRef = useRef();
 
+  // Video Card Animation for page
   useLayoutEffect( () => {
     let ctx = gsap.context(() => {
 

@@ -64,7 +64,7 @@ export default function Yard() {
   }
 }
 
-// Season Selector
+// SEASON SELECTOR PAGE 1 ------------------------------------------------------
 export function SeasonSelector(props) {
 
   return <>
@@ -111,6 +111,23 @@ export function SeasonSelector(props) {
 // Spring Videos to add with other video object
 export function SpringVideos(props) {
 
+  //header animation
+  const headerRef = useRef();
+
+  useLayoutEffect( () => {
+    let ctx = gsap.context(() => {
+
+      gsap.from('.header-container-title', {
+        y: -50,
+        yoyo: true,
+        ease: 'back',
+        duration: 1
+      })
+    }, headerRef)
+
+    return () => ctx.revert();
+  }, [])
+
   const videos = [
     {
       id: 1,
@@ -124,7 +141,7 @@ export function SpringVideos(props) {
     <div className="page-container">
       <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
 
-    <div className="header-container">
+    <div ref={headerRef} className="header-container">
       <h1 className='header-container-title'>Spring Yard Videos</h1>
     </div>
     <p>Under Construction Check Back Soon</p>
@@ -136,8 +153,25 @@ export function SpringVideos(props) {
   </>
 }
 
-// SUMMER VIDEOS
+// SUMMER VIDEOS PAGE ----------------------------------------------------------
 export function SummerVideos(props) {
+
+  //header animation
+  const headerRef = useRef();
+
+  useLayoutEffect( () => {
+    let ctx = gsap.context(() => {
+
+      gsap.from('.header-container-title', {
+        y: -50,
+        yoyo: true,
+        ease: 'back',
+        duration: 1
+      })
+    }, headerRef)
+
+    return () => ctx.revert();
+  }, [])
 
   const videos = [
     {
@@ -151,7 +185,7 @@ export function SummerVideos(props) {
   return <>
     <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
 
-    <div className="header-container">
+    <div ref={headerRef} className="header-container">
       <h1 className='header-container-title'>Summer Yard Videos</h1>
     </div>
 
@@ -159,14 +193,31 @@ export function SummerVideos(props) {
 
   </>
 }
-// FALL VIDEOS
+// FALL VIDEOS PAGE ------------------------------------------------------------
 export function FallVideos(props) {
+
+  //header animation
+  const headerRef = useRef();
+
+  useLayoutEffect( () => {
+    let ctx = gsap.context(() => {
+
+      gsap.from('.header-container-title', {
+        y: -50,
+        yoyo: true,
+        ease: 'back',
+        duration: 1
+      })
+    }, headerRef)
+
+    return () => ctx.revert();
+  }, [])
 
   return <>
     <div className="page-container">
       <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
 
-    <div className="header-container">
+    <div ref={headerRef} className="header-container">
       <h1 className='header-container-title'>Fall Yard Videos</h1>
     </div>
     <p>Under Construction Check Back Soon</p>
@@ -174,14 +225,31 @@ export function FallVideos(props) {
   </div>
   </>
 }
-// WINTER VIDEOS
+// WINTER VIDEOS PAGE ----------------------------------------------------------
 export function WinterVideos(props) {
+
+  //header animation
+  const headerRef = useRef();
+
+  useLayoutEffect( () => {
+    let ctx = gsap.context(() => {
+
+      gsap.from('.header-container-title', {
+        y: -50,
+        yoyo: true,
+        ease: 'back',
+        duration: 1
+      })
+    }, headerRef)
+
+    return () => ctx.revert();
+  }, [])
 
   return <>
     <div className="page-container">
       <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
 
-    <div className="header-container">
+    <div ref={headerRef} className="header-container">
       <h1 className='header-container-title'>Winter Yard Videos</h1>
     </div>
     <p>Under Construction Check Back Soon</p>
@@ -193,11 +261,28 @@ export function WinterVideos(props) {
 export function VideoPlayer(props) {
   console.log(props.videos.map((video) => video.title));
 
+  const videoPlayerRef = useRef();
+
+  // Video Card Animation for page
+  useLayoutEffect( () => {
+    let ctx = gsap.context(() => {
+
+      // Seasons Button fade effect
+      gsap.from('.content-container-card', {
+        opacity: 0,
+        delay: .5,
+        stagger: .3
+      })
+    }, videoPlayerRef)
+
+    return () => ctx.revert();
+  }, [])
+
   return <>
 
   {/* Video Component */}
   <div className="content-container-outer">
-    <div className="content-container-layout">
+    <div ref={videoPlayerRef} className="content-container-layout">
       {props.videos.map((video) => (
         <div className="content-container-card">
           <h2 key={video.id} className='video-title center'>{video.title}</h2>
