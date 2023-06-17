@@ -111,15 +111,7 @@ h1, h2, h3, h4, p, a, li {
   color: #0077b6;
 }
 
-/* Season Animations */
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 
 /* Page Center Container for pages under construction */
 .page-container {
@@ -148,6 +140,18 @@ h1, h2, h3, h4, p, a, li {
   margin: auto;
   padding-bottom: 40px;
 }
+.content-container-card:nth-child(1) {
+  animation: fade 1s ease-in;
+}
+.content-container-card:nth-child(2) {
+  animation: fade 1.2s ease-in;
+}
+.content-container-card:nth-child(3) {
+  animation: fade 1.5s ease-in;
+}
+.content-container-card:nth-child(4) {
+  animation: fade 1.7s ease-in;
+}
 .content-container-title {
   display: flex;
   justify-content: center;
@@ -172,6 +176,18 @@ h1, h2, h3, h4, p, a, li {
 .content-container-layout li {
   font-size: 18px;
   color: #6B705C;
+}
+/* Season Animations */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 
