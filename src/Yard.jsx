@@ -263,28 +263,28 @@ export function WinterVideos(props) {
 export function VideoPlayer(props) {
   console.log(props.videos.map((video) => video.title));
 
-  const videoPlayerRef = useRef();
+  // const videoPlayerRef = useRef();
 
-  // Video Card Animation for page
-  useLayoutEffect( () => {
-    let ctx = gsap.context(() => {
+  // // Video Card Animation for page
+  // useLayoutEffect( () => {
+  //   let ctx = gsap.context(() => {
 
-      // Seasons Button fade effect
-      gsap.from('.content-container-card', {
-        opacity: 0,
-        delay: .5,
-        stagger: .3
-      })
-    }, videoPlayerRef)
+  //     // Seasons Button fade effect
+  //     gsap.from('.content-container-card', {
+  //       opacity: 0,
+  //       delay: .5,
+  //       stagger: .3
+  //     })
+  //   }, videoPlayerRef)
 
-    return () => ctx.revert();
-  }, [])
+  //   return () => ctx.revert();
+  // }, [])
 
   return <>
 
   {/* Video Component */}
   <div className="content-container-outer">
-    <div ref={videoPlayerRef} className="content-container-layout">
+    <div className="content-container-layout">
       {props.videos.map((video) => (
         <div className="content-container-card">
           <h2 key={video.id} className='video-title center'>{video.title}</h2>
