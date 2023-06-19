@@ -142,21 +142,33 @@ export function SummerVideos(props) {
     },
     {
       id: 4,
+      url: 'https://www.youtube.com/embed/QZypPj09LRM',
+      title: 'Pump In-line Filter',
+      summary: 'After backwashing, you can clean the filter using high pressure water. Fill up the basin with water and seal the top back up then restart your pump. Do this after each backwash.'
+    },
+    {
+      id: 5,
       url: 'https://www.youtube.com/embed/LS7lhEOAIkc',
       title: 'Using the Pool Robot',
       summary: 'Throw the robot in with plenty of slack on the cable. Turn the robot on with the power button on the box. It will run for 2 hours. Do it once per day in spring and early summer.'
     },
     {
-      id: 5,
+      id: 6,
       url: 'https://www.youtube.com/embed/SA7y3CsX_C4',
       title: 'Ceaning the Robot',
       summary: 'Pop off the filter cover. If they are dirty just rinse with the hose on a lighter setting to protect the fabric of the filter to get it all cleaned up and ready to go.'
     },
     {
-      id: 6,
+      id: 7,
       url: 'https://www.youtube.com/embed/vwXOUYcozJI',
       title: 'Pool Breaker Box',
       summary: 'Down is OFF, Up is ON. Shut the pump off for a few hours during the hottest hours of the day to save pump lifetime and electric cost.'
+    },
+    {
+      id: 8,
+      url: 'https://www.youtube.com/embed/h82QoSTausM',
+      title: 'Hot Tub Drain & Refill',
+      summary: 'Shut off power to the breaker next to the hot tub and connect the hose to the hose attachment. Drag the hose out to the side yard to drain. You can use the time to check the filter and cartriges and replace or clean as needed. Turn the power back on after refilled.'
     }
   ]
     // summer page header animation
