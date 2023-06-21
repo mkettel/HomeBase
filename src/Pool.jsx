@@ -121,6 +121,7 @@ export function SpringVideos(props) {
 // SUMMER VIDEOS PAGE-----------------------------------------------------------
 export function SummerVideos(props) {
 
+
   const summerPoolVideos = [
     {
       id: 1,
@@ -166,6 +167,18 @@ export function SummerVideos(props) {
     },
     {
       id: 8,
+      url: 'https://www.youtube.com/embed/nDJUV7aQNag',
+      title: 'Post Party Bicarb',
+      summary: 'After a pool party it is important to add 3/4 of the cup of bicarb to a bucket of water. Pour this mixture in by the jets in the pool to help disperse.'
+    },
+    {
+      id: 9,
+      url: 'https://www.youtube.com/embed/RKo8zXJXNrw',
+      title: 'Pool Shock',
+      summary: 'After a party or a heavy rain it is important to sprinkle a bag of shock into the pool to level the pH of the water. Do not swim for a few hours after putting the shock into the pool.'
+    },
+    {
+      id: 9,
       url: 'https://www.youtube.com/embed/h82QoSTausM',
       title: 'Hot Tub Drain & Refill',
       summary: 'Shut off power to the breaker next to the hot tub and connect the hose to the hose attachment. Drag the hose out to the side yard to drain. You can use the time to check the filter and cartriges and replace or clean as needed. Turn the power back on after refilled.'
