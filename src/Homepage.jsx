@@ -22,7 +22,6 @@ export default function Homepage() {
 
         <Sky distance={450000} sunPosition={[1, -1, 0]} inclination={0} azimuth={0.25}  />
       </Canvas>
-      {/* Buttons and title */}
       <Overlay />
     </div>
   </>
