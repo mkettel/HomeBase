@@ -23,19 +23,19 @@ export default function Trails() {
   return <>
 
     <Trail
-    width={2} // Width of the line
-    color={'#65AFFF'} // Color of the line
-    length={9} // Length of the line
-    decay={1} // How fast the line fades away
-    local={false} // Wether to use the target's world or local positions
-    stride={0} // Min distance between previous and current point
-    interval={1} // Number of frames to wait before next calculation
-    target={sphere} // Optional target. This object will produce the trail.
-    attenuation={(width) => width} // A function to define the width in each point along it.
-    emissionRate={10} // How many particles will be emitted per frame
-  >
+      width={.5} // Width of the line
+      color={'#65AFFF'} // Color of the line
+      length={9} // Length of the line
+      decay={1} // How fast the line fades away
+      local={false} // Wether to use the target's world or local positions
+      stride={0} // Min distance between previous and current point
+      interval={1} // Number of frames to wait before next calculation
+      target={sphere} // Optional target. This object will produce the trail.
+      attenuation={(width) => width} // A function to define the width in each point along it.
+      emissionRate={10} // How many particles will be emitted per frame
+    >
     {/* If `target` is not defined, Trail will use the first `Object3D` child as the target. */}
-    <mesh position={[3, 9, -10]} ref={sphere} scale={.07}>
+    <mesh position={[3, 9, -10]} ref={sphere} scale={.02}>
       <sphereGeometry  />
       <meshStandardMaterial
       color={'#65AFFF'}

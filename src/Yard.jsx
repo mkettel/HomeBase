@@ -133,22 +133,36 @@ export function SpringVideos(props) {
   const videos = [
     {
       id: 1,
-      url: 'https://www.youtube.com/embed/9VUAWGzlDsk',
-      title: 'Floating Chlorine Chambersssss yoooooooo',
-      summary: 'The chamber can hold up to 6 tablets and will slowly release chlorine into the pool to keep the ph lower'
+      url: 'https://www.youtube.com/embed/f_ZumhPJ5mk',
+      title: 'Bird Food Location',
+      summary: 'If you would like to feed the birds we have the bird food located on the side yard in this bin. Choose the feed desired and place in the feeder.'
+    },
+    {
+      id: 2,
+      url: 'https://www.youtube.com/embed/77SAlKHjLck',
+      title: 'Hummingbird Feeders',
+      summary: 'There are a 3 feeders. One by the shed, pinoak, and kitchen window. Replace the water weekly if you desire.'
+    },
+    {
+      id: 3,
+      url: 'https://www.youtube.com/embed/jGxHfQmI2iI',
+      title: 'Mower and Weedwacker ',
+      summary: 'The mower and weedwacker are located in the garage. You can bag or mulch with the grass clippings and you will find the batteries for both items on the work bench charging.'
+    },
+    {
+      id: 4,
+      url: 'https://www.youtube.com/embed/iAS7IL0bpv8',
+      title: 'Garden Treats',
+      summary: 'Feel free to help yourself to any of the garden treats! There are plenty of differnet crops growing so throw them in some food and enjoy!'
     }
   ]
 
   return <>
-    <div className="page-container">
-      <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
+    <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
 
     <div ref={headerRef} className="header-container">
       <h1 className='header-container-title'>Spring Yard Videos</h1>
     </div>
-    <p>Under Construction Check Back Soon</p>
-    <button onClick={() => props.setSeason('season')}>Back to Seasons</button>
-  </div>
 
   <VideoPlayer videos={videos} />
 
@@ -178,9 +192,27 @@ export function SummerVideos(props) {
   const videos = [
     {
       id: 1,
-      url: 'https://www.youtube.com/embed/9VUAWGzlDsk',
-      title: 'Floating Chlorine Chamber',
-      summary: 'The chamber can hold up to 6 tablets and will slowly release chlorine into the pool to keep the ph lower'
+      url: 'https://www.youtube.com/embed/f_ZumhPJ5mk',
+      title: 'Bird Food Location',
+      summary: 'If you would like to feed the birds we have the bird food located on the side yard in this bin. Choose the feed desired and place in the feeder.'
+    },
+    {
+      id: 2,
+      url: 'https://www.youtube.com/embed/77SAlKHjLck',
+      title: 'Hummingbird Feeders',
+      summary: 'There are a 3 feeders. One by the shed, pinoak, and kitchen window. Replace the water weekly if you desire.'
+    },
+    {
+      id: 3,
+      url: 'https://www.youtube.com/embed/jGxHfQmI2iI',
+      title: 'Mower and Weedwacker ',
+      summary: 'The mower and weedwacker are located in the garage. You can bag or mulch with the grass clippings and you will find the batteries for both items on the work bench charging.'
+    },
+    {
+      id: 4,
+      url: 'https://www.youtube.com/embed/iAS7IL0bpv8',
+      title: 'Garden Treats',
+      summary: 'Feel free to help yourself to any of the garden treats! There are plenty of differnet crops growing so throw them in some food and enjoy!'
     }
   ]
 
@@ -215,16 +247,25 @@ export function FallVideos(props) {
     return () => ctx.revert();
   }, [])
 
+  const videos = [
+    {
+      id: 1,
+      url: 'https://www.youtube.com/embed/f_ZumhPJ5mk',
+      title: 'Bird Food Location',
+      summary: 'If you would like to feed the birds we have the bird food located on the side yard in this bin. Choose the feed desired and place in the feeder.'
+    }
+  ]
+
   return <>
-    <div className="page-container">
-      <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
+
+    <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
 
     <div ref={headerRef} className="header-container">
       <h1 className='header-container-title'>Fall Yard Videos</h1>
     </div>
-    <p>Under Construction Check Back Soon</p>
-    <button onClick={() => props.setSeason('season')}>Back to Seasons</button>
-  </div>
+
+    <VideoPlayer videos={videos} />
+
   </>
 }
 // WINTER VIDEOS PAGE ----------------------------------------------------------
@@ -247,16 +288,24 @@ export function WinterVideos(props) {
     return () => ctx.revert();
   }, [])
 
+  const videos = [
+    {
+      id: 1,
+      url: 'https://www.youtube.com/embed/f_ZumhPJ5mk',
+      title: 'Bird Food Location',
+      summary: 'If you would like to feed the birds we have the bird food located on the side yard in this bin. Choose the feed desired and place in the feeder.'
+    }
+  ]
+
   return <>
-    <div className="page-container">
-      <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
+    <button className='seasons-back-button' onClick={() => props.setSeason('season')}>Back to Seasons</button>
 
     <div ref={headerRef} className="header-container">
       <h1 className='header-container-title'>Winter Yard Videos</h1>
     </div>
-    <p>Under Construction Check Back Soon</p>
-    <button onClick={() => props.setSeason('season')}>Back to Seasons</button>
-  </div>
+
+    <VideoPlayer videos={videos} />
+
   </>
 }
 
