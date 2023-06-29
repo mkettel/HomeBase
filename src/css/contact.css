@@ -81,6 +81,10 @@
 
 @media only screen and  (min-width: 200px) and (max-width: 700px) {
 
+  .contact-container {
+    height: 90vh;
+  }
+
   .contact-card {
     width: 360px;
     height: 430px;
