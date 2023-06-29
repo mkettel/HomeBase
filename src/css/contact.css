@@ -77,3 +77,18 @@
 .contact-card .contact-card-person .color-num:nth-child(3) {
   color: #ff0000;
 }
+
+
+@media only screen and  (min-width: 200px) and (max-width: 700px) {
+
+  .contact-card {
+    width: 360px;
+    height: 430px;
+  }
+
+  .contact-card .contact-card-person .name {
+    font-size: 18px;
+  }
+
+
+}
