@@ -182,6 +182,12 @@ export function SummerVideos(props) {
       url: 'https://www.youtube.com/embed/h82QoSTausM',
       title: 'Hot Tub Drain & Refill',
       summary: 'Shut off power to the breaker next to the hot tub and connect the hose to the hose attachment. Drag the hose out to the side yard to drain. You can use the time to check the filter and cartriges and replace or clean as needed. Turn the power back on after refilled.'
+    },
+    {
+      id: 10,
+      url: 'https://www.youtube.com/embed/VfQaTT5CpGE',
+      title: 'Pool Liner Repair',
+      summary: 'Sometimes the liner channel will come out of the track. You can use your hands or a small dull rock to push it back in the track.'
     }
   ]
     // summer page header animation

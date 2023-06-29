@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Pool from './Pool'
 import Homepage from './Homepage'
 import Yard from './Yard'
+import Contact from './Contact'
 // import { BrowserRouter as Router } from 'react-router-dom'
 // import { Route, Routes, Link } from 'react-router-dom'
 import { Link, Route, Switch } from 'wouter';
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/" component={Homepage} />
         <Route path="/pool" component={Pool} />
         <Route path="/yard" component={Yard} />
+        <Route path="/contact" component={Contact} />
       </Switch>
     </div>
 

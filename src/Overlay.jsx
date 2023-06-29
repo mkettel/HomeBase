@@ -21,5 +21,9 @@ export default function Overlay() {
       <p className='main-header'>HomeBase</p>
     </div>
 
+    {/* Contact */}
+    <div className="contact-button">
+      <a className='nav' href="/contact">Contact</a>
+    </div>
   </>
 }
