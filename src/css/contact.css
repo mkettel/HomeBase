@@ -1,0 +1,79 @@
+
+.contact-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  border: 2px solid #7D4F50;
+  border-radius: 10px;
+  /* background-color: rgb(188, 184, 184); */
+}
+.contact-card .contact-card-title {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #7D4F50;
+}
+.contact-card .contact-card-title h2 {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+.contact-card .contact-card-person:nth-child(1) {
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-card .contact-card-person {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-card .contact-card-person .name {
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 500;
+  /* color: #7D4F50; */
+}
+.contact-card .contact-card-person .number {
+  margin: 0px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.contact-card .contact-card-person .color-num {
+  display: inline-block;
+  transition: .3s;
+}
+.contact-card .contact-card-person .number:hover .color-num:nth-child(1){
+  transform: rotate(-9deg);
+  transition: .3s;
+  color: #5f81ea;
+}
+.contact-card .contact-card-person .number:hover .color-num:nth-child(2){
+  transform: rotate(9deg);
+  transition: .3s;
+  color: #bf3100;
+}
+.contact-card .contact-card-person .number:hover .color-num:nth-child(3){
+  transform: rotate(-9deg);
+  transition: .3s;
+  color: #bf3100;
+}
+.contact-card .contact-card-person .color-num:nth-child(1) {
+  color: #bf3100;
+}
+.contact-card .contact-card-person .color-num:nth-child(2) {
+  color: #0077b6;
+}
+.contact-card .contact-card-person .color-num:nth-child(3) {
+  color: #ff0000;
+}
