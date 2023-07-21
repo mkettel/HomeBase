@@ -1,10 +1,11 @@
-import { Trail, useMatcapTexture ,Center, Text3D, OrbitControls, MeshTransmissionMaterial } from '@react-three/drei'
+import { Trail, useMatcapTexture ,Center, Text3D, OrbitControls, MeshTransmissionMaterial, PresentationControls } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
 import * as THREE from 'three'
 import { useRef, Suspense } from 'react'
 import House from './House'
 import Trails from './Trails'
 import Placeholder from './Placeholder'
+import { LargeHouse } from './LargeHouse'
 
 
 
@@ -19,7 +20,8 @@ export default function Experience()
       <OrbitControls makeDefault />
 
       {/* adding light looking at the house but subtle */}
-      <ambientLight intensity={.1} />
+      <ambientLight intensity={.2} />
+      <directionalLight intensity={1} position={[0, 0, 0]} />
 
       {/* Extra 3d Text (not used currently) */}
       <Text3D
@@ -40,10 +42,11 @@ export default function Experience()
       <Trails />
 
       <Suspense fallback={ <Placeholder position={[0, -.5, 0]} scale={[2, 2, 2]} /> }>
-        <Center>
-          <House position={[0, - 1, 0]} scale={1} rotation={[0, Math.PI, 0]} />
-        </Center>
+
+          <LargeHouse position={[0, 0, 5]} scale={1} rotation={[0, Math.PI, 0]} />
+
       </Suspense>
+
 
     </>
 }
