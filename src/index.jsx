@@ -6,6 +6,7 @@ import Homepage from './Homepage'
 // import { BrowserRouter as Router } from 'react-router-dom'
 import { Router, Route, Switch, Link } from 'wouter';
 import App from './App'
+import { Analytics } from '@vercel/analytics/react';
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -14,5 +15,6 @@ root.render(
 
     <Router>
       <App />
+      <Analytics />
     </Router>
 )
