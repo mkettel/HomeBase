@@ -15,7 +15,7 @@ export default function Homepage() {
             fov: 50,
             near: 0.1,
             far: 200,
-            position: [ -4, 2, 20 ]
+            position: [ -4, 4, 20 ]
         } }
       >
         {/* <Center> */}

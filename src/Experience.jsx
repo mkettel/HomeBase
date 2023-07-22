@@ -43,7 +43,7 @@ export default function Experience()
 
       <Suspense fallback={ <Placeholder position={[0, -.5, 0]} scale={[2, 2, 2]} /> }>
 
-          <LargeHouse position={[0, 0, 5]} scale={1} rotation={[0, Math.PI, 0]} />
+          <LargeHouse position={[0, 0, 5]} scale={1.2} rotation={[0, Math.PI, 0]} />
 
       </Suspense>
 

@@ -18,7 +18,7 @@ export function LargeHouse(props) {
   // House Rotation
   const house = useRef();
   useFrame(() => {
-    house.current.rotation.y += 0.0001;
+    house.current.rotation.y += 0.00001;
   });
 
   // Click on ground to go to pool page
@@ -35,7 +35,7 @@ export function LargeHouse(props) {
 
   // Cursor change on hover to pointer
   useEffect(() => {
-    document.body.style.cursor = hovered ? 'pointer' : 'auto'
+    document.body.style.cursor = hovered ? 'pointer' : 'auto';
   }, [hovered])
 
   return (
