@@ -12,7 +12,8 @@ export function LargeHouse(props) {
 
   // change house body color
   materials["Material.002"].color = new THREE.Color('#918C78'); // Set house body color to brown
-  materials["Material.002"].roughness = 1;
+  materials["Material.002"].roughness = .8;
+  materials["Material.002"].metalness = 0;
 
 
   // House Rotation
@@ -37,6 +38,7 @@ export function LargeHouse(props) {
   useEffect(() => {
     document.body.style.cursor = hovered ? 'pointer' : 'auto';
   }, [hovered])
+
 
   return (
     <group ref={house} {...props} dispose={null}>
@@ -325,6 +327,7 @@ export function LargeHouse(props) {
           scale={[0.266, 1, 0.207]}
         />
       </mesh>
+      {/* Pool Container */}
       <mesh
         castShadow
         receiveShadow

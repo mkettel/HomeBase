@@ -21,7 +21,9 @@ export default function Experience()
 
       {/* adding light looking at the house but subtle */}
       <ambientLight intensity={.2} />
-      <directionalLight intensity={1} position={[0, 0, 0]} />
+      {/* <directionalLight intensity={.4} position={[0, 10, 0]} /> */}
+      <pointLight intensity={.5} position={[0, 0.6, 7.2]} color={'yellow'} />
+      <pointLight intensity={.5} position={[0, 0.6, -3.2]} color={'blue'} />
 
       {/* Extra 3d Text (not used currently) */}
       <Text3D
