@@ -1,7 +1,7 @@
 import { Trail, useMatcapTexture ,Center, Text3D, OrbitControls, MeshTransmissionMaterial, PresentationControls } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
 import * as THREE from 'three'
-import { useRef, Suspense } from 'react'
+import { useRef, Suspense, useEffect, useState } from 'react'
 import House from './House'
 import Trails from './Trails'
 import Placeholder from './Placeholder'
@@ -12,6 +12,27 @@ import { LargeHouse } from './LargeHouse'
 export default function Experience()
 {
    const [ matcapTexture ] = useMatcapTexture('7B5254_E9DCC7_B19986_C8AC91', 256)
+
+    // Resizing for Mobile
+    const [houseScale, setHouseScale] = useState(1.2)
+    const [housePosition, setHousePosition] = useState([0, 0, 5])
+
+    useEffect(() => {
+      function handleResize() {
+        const { innerWidth } = window;
+        const isMobile = innerWidth <= 768; // Adjust the breakpoint for mobile devices
+        const scale = isMobile ? .9 : 1.3; // Adjust the scale values for mobile
+        const position = isMobile ? [0, 0, 3] : [0, 0, 5]
+        setHouseScale(scale);
+        setHousePosition(position);
+      }
+      window.addEventListener('resize', handleResize);
+    handleResize(); // Call the function initially
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+    }, []);
 
     return <>
 
@@ -45,7 +66,7 @@ export default function Experience()
 
       <Suspense fallback={ <Placeholder position={[0, -.5, 0]} scale={[2, 2, 2]} /> }>
 
-          <LargeHouse position={[0, 0, 5]} scale={1.2} rotation={[0, Math.PI, 0]} />
+          <LargeHouse position={housePosition} scale={houseScale} rotation={[0, Math.PI, 0]} />
 
       </Suspense>
 
