@@ -19,7 +19,7 @@
 /* font-family: 'Cabinet Grotesk', sans-serif; */
 .overlay-description {
   position: absolute;
-  top: 20px;
+  top: 5px;
   left: 40px;
   z-index: 100;
   font-family: 'Cabinet Grotesk', sans-serif;
@@ -27,7 +27,7 @@
 }
 .main-header {
   color: rgb(211, 211, 241);
-  font-size: 22px;
+  font-size: 28px;
   text-decoration: none;
 }
 
@@ -54,11 +54,13 @@
 }
 .nav {
   color: rgb(211, 211, 241);
+  color: #4A314D;
   font-size: 18px;
   text-decoration: none;
 }
 .nav:hover {
-  color: rgb(176, 164, 209);
+  color: rgb(106, 87, 159);
+  color: #D6E3F8;
 }
 
 
