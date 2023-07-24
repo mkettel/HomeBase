@@ -4,7 +4,8 @@ import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 
 export function LargeHouse(props) {
-  const { nodes, materials } = useGLTF("/winter-casa.glb");
+  const { nodes, materials } = useGLTF("/winter-casa-wider.glb");
+
 
   materials.Snow.color = new THREE.Color(0xffffff); // Set snow color to white
   materials.Snow.roughness = 0.9;
@@ -14,6 +15,9 @@ export function LargeHouse(props) {
   materials["Material.002"].color = new THREE.Color('#918C78'); // Set house body color to brown
   materials["Material.002"].roughness = .8;
   materials["Material.002"].metalness = 0;
+
+  // Ground Snow
+  materials["Snow.006"].roughness = .4;
 
 
   // House Rotation
@@ -30,7 +34,6 @@ export function LargeHouse(props) {
     window.location.href = "/yard";
   }
 
-
   // States
   const [hovered, setHovered] = useState(false);
 
@@ -39,7 +42,6 @@ export function LargeHouse(props) {
     document.body.style.cursor = hovered ? 'pointer' : 'auto';
   }, [hovered])
 
-
   return (
     <group ref={house} {...props} dispose={null}>
       <mesh
@@ -47,7 +49,7 @@ export function LargeHouse(props) {
         receiveShadow
         geometry={nodes.tree.geometry}
         material={nodes.tree.material}
-        position={[2.644, 0.236, 1.321]}
+        position={[3.571, 0.236, 1.321]}
         rotation={[-0.064, -0.417, -0.085]}
         scale={0.813}
         onDoubleClick={yardClick}
@@ -150,14 +152,67 @@ export function LargeHouse(props) {
           onPointerOut={() => setHovered(false)}
         />
       </mesh>
-      {/* Main House Ground */}
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.pole.geometry}
+        material={materials.pole}
+        position={[-2.047, 0.029, -3.544]}
+        rotation={[-Math.PI, 0, -Math.PI]}
+        scale={[-0.092, -0.808, -0.076]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.sign.geometry}
+        material={materials.sign}
+        position={[-2.06, 1.151, -3.991]}
+        scale={[0.551, 0.448, 0.573]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Text.geometry}
+        material={materials["Material.007"]}
+        position={[-1.577, 1.282, -3.683]}
+        rotation={[1.587, -0.099, -3.109]}
+        scale={0.137}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.tile.geometry}
+        material={materials["tile-color"]}
+        position={[-0.018, 0.292, -1.825]}
+        rotation={[0, 0, -Math.PI]}
+        scale={[-0.302, -0.022, -0.26]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.tile001.geometry}
+        material={materials["tile-color"]}
+        position={[-0.018, 0.311, -2.577]}
+        rotation={[0, 0, -Math.PI]}
+        scale={[-0.302, -0.022, -0.26]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.tile002.geometry}
+        material={materials["tile-color"]}
+        position={[-0.124, 0.3, -3.278]}
+        rotation={[-0.012, 0.086, 3.11]}
+        scale={[-0.302, -0.022, -0.26]}
+      />
+      {/* Main Ground */}
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Plane006.geometry}
         material={materials["Snow.006"]}
         position={[0, 0.279, 0.026]}
-        scale={[3.791, 3.781, 3.844]}
+        scale={[3.791, 6.239, 3.844]}
       >
         <mesh
           castShadow
@@ -168,7 +223,6 @@ export function LargeHouse(props) {
           scale={0.264}
         />
       </mesh>
-      {/* Glow circle top */}
       <mesh
         castShadow
         receiveShadow
@@ -182,7 +236,7 @@ export function LargeHouse(props) {
         receiveShadow
         geometry={nodes.Plane007.geometry}
         material={materials["Material.001"]}
-        position={[-1.340, 1.096, -0.011]}
+        position={[-1.284, 1.096, -0.011]}
         rotation={[0, 0, 1.635]}
         scale={0.278}
       />
@@ -327,7 +381,6 @@ export function LargeHouse(props) {
           scale={[0.266, 1, 0.207]}
         />
       </mesh>
-      {/* Pool Container */}
       <mesh
         castShadow
         receiveShadow
@@ -340,16 +393,8 @@ export function LargeHouse(props) {
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
       />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cube004.geometry}
-        material={materials["Snow.006"]}
-        position={[-0.017, -1.261, 0.082]}
-        scale={[3.796, 1, 3.682]}
-      />
     </group>
   );
 }
 
-useGLTF.preload("/winter-casa.glb");
+useGLTF.preload("/winter-casa-wider.glb");

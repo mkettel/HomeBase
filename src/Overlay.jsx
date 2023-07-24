@@ -8,22 +8,28 @@ export default function Overlay() {
   return <>
 
     <div className="pool-button">
-      <a className='nav' href="/pool">Pool</a>
+      <a className='norm nav' href="/pool">Pool</a>
     </div>
 
 
     <div className="yard-button">
-      <a className='nav' href="/yard">Yard</a>
+      <a className='norm nav' href="/yard">Yard</a>
     </div>
 
-    {/* Description */}
+    {/* Header */}
     <div className="overlay-description">
       <p className='main-header'>HomeBase</p>
     </div>
 
     {/* Contact */}
     <div className="contact-button">
-      <a className='nav' href="/contact">Contact</a>
+      <a className='norm nav' href="/contact">Contact</a>
     </div>
+
+    {/* Description */}
+    <div className="description">
+      <p className='norm' href="/contact">Use buttons below or double-click your desired feature to access videos</p>
+    </div>
+
   </>
 }

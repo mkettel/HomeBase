@@ -52,7 +52,7 @@
   z-index: 100;
   font-family: 'Cabinet Grotesk', sans-serif;
 }
-.nav {
+.norm {
   color: rgb(211, 211, 241);
   color: #4A314D;
   font-size: 18px;
@@ -61,6 +61,15 @@
 .nav:hover {
   color: rgb(106, 87, 159);
   color: #D6E3F8;
+}
+.description {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 150px;
+  border: 1px solid rgb(106, 87, 159);
+  padding: 10px;
+  text-align: center;
 }
 
 
