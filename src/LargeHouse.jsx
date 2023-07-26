@@ -23,7 +23,7 @@ export function LargeHouse(props) {
   // House Rotation
   const house = useRef();
   useFrame(() => {
-    house.current.rotation.y += 0.00001;
+    // house.current.rotation.y += 0.00001;
   });
 
   // Click on ground to go to pool page
