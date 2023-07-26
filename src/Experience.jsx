@@ -38,7 +38,7 @@ export default function Experience()
 
       {/* <Perf position="top-left" /> */}
 
-      <OrbitControls makeDefault />
+      <OrbitControls makeDefault autoRotate />
 
       {/* adding light looking at the house but subtle */}
       <ambientLight intensity={.2} />
