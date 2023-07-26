@@ -1,11 +1,8 @@
 import './style.css'
-import ReactDOM from 'react-dom'
 import Pool from './Pool'
 import Homepage from './Homepage'
 import Yard from './Yard'
 import Contact from './Contact'
-// import { BrowserRouter as Router } from 'react-router-dom'
-// import { Route, Routes, Link } from 'react-router-dom'
 import { Link, Route, Switch } from 'wouter';
 
 

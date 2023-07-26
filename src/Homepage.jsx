@@ -1,8 +1,7 @@
 import './style.css'
-import ReactDOM from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
 import Experience from './Experience.jsx'
-import { Sky, Environment, Center } from '@react-three/drei'
+import { Sky, Environment } from '@react-three/drei'
 import Overlay from './Overlay.jsx'
 
 
@@ -18,11 +17,10 @@ export default function Homepage() {
             position: [ -4, 4, 20 ]
         } }
       >
-        {/* <Center> */}
-          <Experience />
-        {/* </Center> */}
 
-        <Sky distance={450000} sunPosition={[2, .2, 0]} inclination={0} azimuth={0.05}  />
+        <Experience />
+
+        <Sky distance={450000} sunPosition={[8, .4, 3]} inclination={0} azimuth={0.05}  />
         <Environment
           files={[
             './envmap/farmenv/nx.jpg',
